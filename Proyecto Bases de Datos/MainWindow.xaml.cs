@@ -35,7 +35,7 @@ namespace Proyecto_Bases_de_Datos
             try
             {
 
-                OracleConnection conn = new OracleConnection("DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=DELRAM;PASSWORD ="+ tbx_contraseña.Text);
+                OracleConnection conn = new OracleConnection("DATA SOURCE=localhost:1521/XE;DBA PRIVILEGE=SYSDBA;PERSIST SECURITY INFO=True;USER ID=SYS;PASSWORD=" + tbx_contraseña.Text);
                 conn.Open();
                 MessageBox.Show("conectado correctamente a la base de datos");
                 Conexion contraseña = new Conexion();

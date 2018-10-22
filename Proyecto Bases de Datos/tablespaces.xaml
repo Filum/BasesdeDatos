@@ -10,19 +10,19 @@
         <Label x:Name="label" Content="Administración de tablespaces " HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
         <Grid HorizontalAlignment="Left" Height="189" Margin="0,86,0,0" VerticalAlignment="Top" Width="310" Background="#FF35CD47">
             <Label x:Name="label1" Content="Crear un tablespace" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Right" Height="23" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" />
+            <TextBox x:Name="txb_nombretablespace" HorizontalAlignment="Right" Height="23" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" />
             <Label x:Name="label2" Content="Nombre del Tablespace :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,50,0,0"/>
-            <TextBox x:Name="textBox1" HorizontalAlignment="Right" Height="23" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+            <TextBox x:Name="tbx_tamañotablespace" HorizontalAlignment="Right" Height="23" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
             <Label x:Name="label3" Content="Tamaño del Tablespace:" Margin="0,116,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"/>
-            <Button x:Name="button1" Content="Crear Tablespace" HorizontalAlignment="Center" Margin="0,0,0,15" VerticalAlignment="Bottom"/>
+            <Button x:Name="button1" Content="Crear Tablespace" HorizontalAlignment="Center" Margin="0,0,0,15" VerticalAlignment="Bottom" Click="creartablespace_Click"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="189" Margin="315,86,0,0" VerticalAlignment="Top" Width="310" Background="#FF35CD47">
             <Label x:Name="label4" Content="Crear un Tablespace temporal" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox2" HorizontalAlignment="Right" Height="23" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" />
+            <TextBox x:Name="tbx_nombretemporal" HorizontalAlignment="Right" Height="23" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" />
             <Label x:Name="label5" Content="Nombre del Temporal :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,50,0,0"/>
-            <TextBox x:Name="textBox3" HorizontalAlignment="Right" Height="23" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+            <TextBox x:Name="txb_tamañotemporal" HorizontalAlignment="Right" Height="23" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
             <Label x:Name="label6" Content="Tamaño del Temporal:" Margin="0,116,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="138"/>
-            <Button x:Name="button2" Content="Crear Temporal" HorizontalAlignment="Center" Margin="0,0,0,15" VerticalAlignment="Bottom"/>
+            <Button x:Name="button2" Content="Crear Temporal" HorizontalAlignment="Center" Margin="0,0,0,15" VerticalAlignment="Bottom" Click="creartemporal_Click"/>
         </Grid>
 
     </Grid>
