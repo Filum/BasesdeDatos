@@ -1,0 +1,19 @@
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csprojAssemblyReference.cache
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\MainWindow.g.cs
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\App.g.cs
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.cache
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.lref
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.exe.config
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.exe
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.pdb
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\MainWindow.baml
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.g.resources
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto_Bases_de_Datos.Properties.Resources.resources
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.GenerateResource.cache
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.exe
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.pdb
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\tablespaces.g.cs
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\tablespaces.baml
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CopyComplete

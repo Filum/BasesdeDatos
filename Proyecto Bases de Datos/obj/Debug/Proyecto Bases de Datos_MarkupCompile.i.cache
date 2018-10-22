@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Usuario\Source\Repos\Proyecto Bases de Datos\Proyecto Bases de Datos\obj\Debug\
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\
 Proyecto_Bases_de_Datos
 none
 false
 DEBUG;TRACE
-C:\Users\Usuario\Source\Repos\Proyecto Bases de Datos\Proyecto Bases de Datos\App.xaml
-11151548125
+C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\App.xaml
+21511604080
 
-9-1858633075
-131569487696
-MainWindow.xaml;
+11-213368556
+15-1459325801
+MainWindow.xaml;tablespaces.xaml;
 
-True
+False
 
