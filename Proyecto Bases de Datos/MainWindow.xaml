@@ -5,12 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_Bases_de_Datos"
         mc:Ignorable="d"
-        Title="Conexion a Base de Datos" Height="200" Width="400" ResizeMode="NoResize">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label x:Name="label" Content="Ingresa la contraseña para conectarte a la base de datos oracle" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Conectar" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="76" Click="conectar_Click" />
-        <TextBox x:Name="tbx_contraseña" HorizontalAlignment="Left" Height="23" Margin="176,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Contraseña:" HorizontalAlignment="Left" Margin="76,74,0,0" VerticalAlignment="Top" Width="74"/>
+
     </Grid>
-    
 </Window>
