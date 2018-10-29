@@ -16,11 +16,18 @@ using Oracle.DataAccess.Client;
 using System.Data;
 
 
+
+
 namespace Proyecto_Bases_de_Datos
 {
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
+    /// 
+
+    
+    
+        
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -31,28 +38,24 @@ namespace Proyecto_Bases_de_Datos
         private void conectar_Click(object sender, RoutedEventArgs e)
         {
 
-
             try
-            {
-
-                OracleConnection conn = new OracleConnection("DATA SOURCE=localhost:1521/XE;DBA PRIVILEGE=SYSDBA;PERSIST SECURITY INFO=True;USER ID=SYS;PASSWORD=" + tbx_contraseña.Text);
+            {   
+                OracleConnection conn = DataBase.Conexion();
                 conn.Open();
-                MessageBox.Show("conectado correctamente a la base de datos");
-                Conexion contraseña = new Conexion();
-                contraseña.contraseña = tbx_contraseña.Text;
-                tablespaces tab = new tablespaces();
-                tab.Show();
+                //OracleCommand comando = new OracleCommand();
+                //comando.Connection = conn;
+                //comando.CommandText = "SELECT CEDULAJURIDICA FROM TBL_PROVEEDORES WHERE CEDULAJURIDICA = " + v_CedJur;
+                //OracleDataReader dr = comando.ExecuteReader();
+                MessageBox.Show("Se ha conectado correctamente con la base de Datos");
+                Menu ventana = new Menu();
+                ventana.Show();
                 this.Close();
-                conn.Close();
-                
             }
-            catch (Exception)
+            catch
             {
-                MessageBox.Show("No se pudo establecer una conexión con la base de datos","Error");
+                MessageBox.Show("No se pudo establecer una conexión con la base de datos", "Error");
             }
-
-
-            
+                        
         }
     }
 }

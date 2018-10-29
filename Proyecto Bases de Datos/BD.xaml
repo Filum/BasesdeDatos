@@ -16,10 +16,21 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button x:Name="btn_menuBD" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
-        <TabControl HorizontalAlignment="Left" Height="300" Margin="26,38,0,0" VerticalAlignment="Top" Width="652">
+        <TabControl Margin="26,38,115.6,37">
             <TabItem Header="Tablespaces">
                 <Grid Background="#FFE5E5E5">
-                    <Label Content="Nombre del Tablespace" HorizontalAlignment="Left" Margin="28,40,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Nombre del Tablespace:" HorizontalAlignment="Left" Margin="28,40,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_nombretablespace" HorizontalAlignment="Left" Height="23" Margin="221,43,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" />
+                    <Label x:Name="label" Content="Tamaño del Tablespace:" HorizontalAlignment="Left" Margin="28,71,0,0" VerticalAlignment="Top" Width="134"/>
+                    <TextBox x:Name="txt_tamañotablespace" HorizontalAlignment="Left" Height="23" Margin="221,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.49,1.009"/>
+                    <Button x:Name="button" Content="Crear Tablespace" HorizontalAlignment="Left" Margin="460,43,0,0" VerticalAlignment="Top" Width="97" Height="54" Click="button_Click"/>
+                    <Label Content="Nombre del Tablespace Temporal:" HorizontalAlignment="Left" Margin="28,131,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_nombretemporal" HorizontalAlignment="Left" Height="23" Margin="221,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" />
+                    <Label x:Name="label_Copy" Content="Tamaño del Tablespace Temporal:" HorizontalAlignment="Left" Margin="28,162,0,0" VerticalAlignment="Top" Width="188"/>
+                    <TextBox x:Name="txt_tamañotemporal" HorizontalAlignment="Left" Height="23" Margin="221,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" RenderTransformOrigin="0.49,1.009"/>
+                    <Button x:Name="button_Copy" Content="Crear Tablespace&#xD;&#xA; Temporal" HorizontalAlignment="Left" Margin="460,134,0,0" VerticalAlignment="Top" Width="97" Height="54" Click="button_Copy_Click"/>
+                    <Label x:Name="lbl_respuesta1" Content="" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lbl_respuesta2" Content="" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Schema">
