@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Oracle.DataAccess.Client;
 
 namespace Proyecto_Bases_de_Datos
 {
@@ -34,6 +35,137 @@ namespace Proyecto_Bases_de_Datos
             Menu menu = new Menu();
             menu.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "create user "+txt_nomUsuario.Text+" identified by "+txt_contraUsuario.Text;
+                OracleDataReader dr = comando.ExecuteReader();
+                lbl_respuesta1.Foreground = Brushes.Green;
+                lbl_respuesta1.Content = "Se creo correctamente el usuario " + txt_nomUsuario.Text;
+                conn.Close();
+            }
+            catch
+            {
+                lbl_respuesta1.Foreground = Brushes.Red;
+                lbl_respuesta1.Content = "No se pudo crear el usuario";
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (txt_nomRol.Text == "" && txt_contraRol.Text=="")
+            {
+                lbl_respuesta3.Foreground = Brushes.Red;
+                lbl_respuesta3.Content = "No se ingresaron datos para crear un rol";
+            }
+            else
+            {
+                if (txt_nomRol.Text != "" && txt_contraRol.Text == "")
+                {
+                    try
+                    {
+                        OracleConnection conn = DataBase.Conexion();
+                        conn.Open();
+                        OracleCommand comando = new OracleCommand();
+                        comando.Connection = conn;
+                        comando.CommandText = "create role "+txt_nomRol.Text; MessageBox.Show(comando.CommandText);
+                        OracleDataReader dr = comando.ExecuteReader();
+                        lbl_respuesta3.Foreground = Brushes.Green;
+                        lbl_respuesta3.Content = "Se creo correctamente el rol " + txt_nomRol.Text;
+                        conn.Close();
+                    }
+                    catch
+                    {
+                        lbl_respuesta3.Foreground = Brushes.Red;
+                        lbl_respuesta3.Content = "No se pudo crear el rol";
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        OracleConnection conn = DataBase.Conexion();
+                        conn.Open();
+                        OracleCommand comando = new OracleCommand();
+                        comando.Connection = conn;
+                        comando.CommandText = "create role " + txt_nomRol.Text+ " identified by "+txt_contraRol.Text; 
+                        OracleDataReader dr = comando.ExecuteReader();
+                        lbl_respuesta3.Foreground = Brushes.Green;
+                        lbl_respuesta3.Content = "Se creo correctamente el rol " + txt_nomRol.Text;
+                        conn.Close();
+                    }
+                    catch
+                    {
+                        lbl_respuesta3.Foreground = Brushes.Red;
+                        lbl_respuesta3.Content = "No se pudo crear el rol";
+                    }
+                }
+
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                OracleDataReader dr;
+
+                if (cbox_connectU.IsChecked == true)
+                {  
+                    comando.CommandText = "GRANT CONNECT TO " + txt_grantUsuarios.Text;  MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+                
+
+                if (cbox_resourceU.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT RESOURCE TO " + txt_grantUsuarios.Text;  MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+                
+
+                if (cbox_sessionU.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT CREATE SESSION TO " + txt_grantUsuarios.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+                
+
+                if (cbox_sysdbaU.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT SYSDBA TO " + txt_grantUsuarios.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+                
+
+                if (cbox_allprivilegesU.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT ALL PRIVILEGES TO " + txt_grantUsuarios.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+               
+                lbl_respuesta2.Foreground = Brushes.Green;
+                lbl_respuesta2.Content = "Se asignaron los permisos correctamente a el usuario " + txt_grantUsuarios.Text;
+                conn.Close();
+            }
+            catch
+            {
+                lbl_respuesta2.Foreground = Brushes.Red;
+                lbl_respuesta2.Content = "No se pudieron asignar los permisos con exito";
+            }
+
         }
     }
 }
