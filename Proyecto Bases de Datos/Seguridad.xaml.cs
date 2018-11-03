@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace Proyecto_Bases_de_Datos
     /// </summary>
     public partial class Seguridad : Window
     {
+
+
+        
         public Seguridad()
         {
             InitializeComponent();
@@ -167,5 +171,98 @@ namespace Proyecto_Bases_de_Datos
             }
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                OracleDataReader dr;
+
+                if (cbox_connectR.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT CONNECT TO " + txt_grantsRoles.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_resourcesR.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT RESOURCE TO " + txt_grantsRoles.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_sessionR.IsChecked == true)
+                {
+                    comando.CommandText = "GRANT CREATE SESSION TO " + txt_grantsRoles.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+
+
+                lbl_respuesta4.Foreground = Brushes.Green;
+                lbl_respuesta4.Content = "Se asignaron los permisos correctamente a el rol " + txt_grantsRoles.Text;
+                conn.Close();
+            }
+            catch
+            {
+                lbl_respuesta4.Foreground = Brushes.Red;
+                lbl_respuesta4.Content = "No se pudieron asignar los permisos con exito";
+            }
+
+        }
+
+        private void button_Click_4(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "select username from all_users"; MessageBox.Show(comando.CommandText);
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_usuarios.ItemsSource = tabla.DefaultView;
+                conn.Close();
+            }
+            catch
+            {
+                lbl_respuesta4.Foreground = Brushes.Red;
+                lbl_respuesta4.Content = "No se pudieron asignar los permisos con exito";
+            }
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "select role from dba_roles"; MessageBox.Show(comando.CommandText);
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_roles.ItemsSource = tabla.DefaultView;
+                conn.Close();
+            }
+            catch
+            {
+                lbl_respuesta4.Foreground = Brushes.Red;
+                lbl_respuesta4.Content = "No se pudieron asignar los permisos con exito";
+            }
+        }
     }
+    
 }
