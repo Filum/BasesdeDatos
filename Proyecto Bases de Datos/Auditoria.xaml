@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Button x:Name="btn_menuA" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
-        <Canvas HorizontalAlignment="Left" Height="332" Margin="10,10,0,0" VerticalAlignment="Top" Width="152">
+        <Canvas HorizontalAlignment="Left" Height="332" Margin="38,15,0,0" VerticalAlignment="Top" Width="152">
             <Canvas.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF0D138D" Offset="1"/>
