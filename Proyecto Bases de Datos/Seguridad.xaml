@@ -18,7 +18,7 @@
                 <GradientStop Color="#FF3262C7" Offset="0.041"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TabControl Height="348" Margin="10,22,120.6,0" VerticalAlignment="Top">
+        <TabControl Height="348" Margin="10,22,88.6,0" VerticalAlignment="Top">
             <TabItem Header="Usuario">
                 <Grid Background="#FFE5E5E5">
                     <StackPanel HorizontalAlignment="Left" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Width="282" Background="#FFE8E7E7">
@@ -104,13 +104,44 @@
                     <Button x:Name="button1" Content="Ver Roles" HorizontalAlignment="Left" Margin="417,35,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" />
                 </Grid>
             </TabItem>
-            <TabItem Header="Asignar Roles">
+            <TabItem Header="Asignar Roles a usuarios">
                 <Grid Background="#FFE5E5E5">
-                    
+                    <DataGrid x:Name="tablaAsignaRol" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="162" Margin="36,125,0,0" VerticalAlignment="Top" Width="115"/>
+                    <DataGrid x:Name="tablaAsignaUsuario" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="162" Margin="274,125,0,0" VerticalAlignment="Top" Width="115"/>
+                    <Button x:Name="button2" Content="Actualizar Datos" HorizontalAlignment="Left" Margin="28,20,0,0" VerticalAlignment="Top" Width="142" Click="button2_Click"/>
+                    <Label x:Name="label" Content="Asignar el Rol:" HorizontalAlignment="Left" Margin="36,62,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label1" Content="al usuario:" HorizontalAlignment="Left" Margin="274,66,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="button3" Content="Asignar " HorizontalAlignment="Left" Margin="513,48,0,0" VerticalAlignment="Top" Width="75" Click="button3_Click" Height="55"/>
+                    <TextBox x:Name="txt_asignarol"  IsReadOnly = "True" HorizontalAlignment="Left" Height="23" Margin="126,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="txt_asignaUsuario"  IsReadOnly = "True" HorizontalAlignment="Left" Height="23" Margin="358,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="button4" Content="Seleccionar Rol" HorizontalAlignment="Left" Margin="160,187,0,0" VerticalAlignment="Top" Width="109" Height="44" Click="button4_Click"/>
+                    <Button x:Name="button5" Content="Seleccionar Usuario" HorizontalAlignment="Left" Margin="400,187,0,0" VerticalAlignment="Top" Width="114" Height="44" Click="button5_Click"/>
+                    <Label x:Name="lbl_respuestaAsignacion" Content="&#xD;&#xA;" HorizontalAlignment="Left" Margin="409,125,0,0" VerticalAlignment="Top" Width="238"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="Asignar Permisos">
                 <Grid Background="#FFE5E5E5">
+                    <Label x:Name="label2" Content="Asignar Permisos de :" HorizontalAlignment="Left" Margin="11,18,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cbox_select" Content="SELECT" HorizontalAlignment="Left" Margin="156,24,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cbox_update" Content="UPDATE" HorizontalAlignment="Left" Margin="246,24,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cbox_delete" Content="DELETE" HorizontalAlignment="Left" Margin="331,25,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="cbox_insert" Content="INSERT" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="414,25,0,0"/>
+                    <Label x:Name="label3" Content="a el schema" HorizontalAlignment="Left" Margin="15,42,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_schema" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="93,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label4" Content="en la tabla" HorizontalAlignment="Left" Margin="218,41,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_tabla" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="289,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label5" Content="para el rol de " HorizontalAlignment="Left" Margin="414,45,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_permisorol" IsReadOnly="True" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="503,48,0,0"/>
+                    <Button x:Name="button6" Content="Actualizar Datos" HorizontalAlignment="Left" Margin="20,86,0,0" VerticalAlignment="Top" Width="113" Click="button6_Click"/>
+                    <Button x:Name="button7" Content="Seleccionar &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="156,167,0,0" VerticalAlignment="Top" Width="75" Click="button7_Click"/>
+                    <Button x:Name="button8" Content="Seleccionar &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="370,167,0,0" VerticalAlignment="Top" Width="75" Click="button8_Click"/>
+                    <Button x:Name="button9" Content="Seleccionar&#xD;&#xA;Rol" HorizontalAlignment="Left" Margin="591,167,0,0" VerticalAlignment="Top" Width="75" Click="button9_Click"/>
+                    <DataGrid x:Name="tabla_schema" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="170" Margin="21,122,0,0" VerticalAlignment="Top" Width="115"/>
+                    <DataGrid x:Name="tabla_tabla" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="170" Margin="246,122,0,0" VerticalAlignment="Top" Width="115"/>
+                    <DataGrid x:Name="tabla_rol" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Height="170" Margin="461,122,0,0" VerticalAlignment="Top" Width="115"/>
+                    <Button x:Name="button10" Content="Asignar Permisos" HorizontalAlignment="Left" Margin="545,86,0,0" VerticalAlignment="Top" Width="121" Click="button10_Click"/>
+                    <Label x:Name="lbl_respuestapermisos" Content="" HorizontalAlignment="Left" Margin="156,87,0,0" VerticalAlignment="Top" Width="371"/>
 
                 </Grid>
             </TabItem>
