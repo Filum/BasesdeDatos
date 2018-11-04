@@ -30,5 +30,10 @@ namespace Proyecto_Bases_de_Datos
             men.Show();
             this.Close();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

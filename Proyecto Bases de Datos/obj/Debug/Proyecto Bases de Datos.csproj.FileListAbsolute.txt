@@ -58,3 +58,34 @@ C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Pro
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.GenerateResource.cache
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CopyComplete
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.exe.config
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.exe
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\bin\Debug\Proyecto Bases de Datos.pdb
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csprojAssemblyReference.cache
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Auditoria.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\BD.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\MainWindow.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Menu.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Performance.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Respaldos.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Seguridad.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Tunning.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\App.g.cs
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.cache
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.lref
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Auditoria.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\BD.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\MainWindow.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Menu.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Performance.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Respaldos.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Seguridad.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Tunning.baml
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.g.resources
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto_Bases_de_Datos.Properties.Resources.resources
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.GenerateResource.cache
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CoreCompileInputs.cache
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.CopyComplete
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.exe
+C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.pdb
