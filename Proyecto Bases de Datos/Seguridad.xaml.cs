@@ -339,7 +339,7 @@ namespace Proyecto_Bases_de_Datos
         {
             try
             {
-                DataRowView view = (DataRowView)tablaAsignaRol.SelectedItem;
+            DataRowView view = (DataRowView)tablaAsignaRol.SelectedItem;
             string cellvalue = view.Row.ItemArray[0].ToString();
             txt_asignarol.Text= cellvalue;
             }
