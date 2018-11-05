@@ -34,9 +34,7 @@
                     <GradientStop Color="#FF0C8DF9"/>
                 </LinearGradientBrush>
             </Canvas.Background>
-            <Button x:Name="button_Copy1" Content="Crear &#xA;Index" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="54" Click="button_Click" Canvas.Left="28" Canvas.Top="23"/>
-            <Button x:Name="button" Content="Habilitar &#xA;Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98" Height="54" Click="button_Click" Canvas.Left="26" Canvas.Top="130"/>
-            <Button x:Name="button_Copy" Content="Deshabilitar &#xA;  Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="54" Click="button_Click" Canvas.Left="28" Canvas.Top="248" RenderTransformOrigin="0.422,0.194"/>
+            <Button x:Name="btn_creari" Content="Crear &#xA;Index" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="54"  Canvas.Left="28" Canvas.Top="23"/>
         </Canvas>
 
     </Grid>
