@@ -34,7 +34,7 @@
                     </Canvas>
                 </Grid>
             </TabItem>
-            <TabItem Header="Estadísticas">
+            <TabItem Header="Estadísticas schema">
                 <Grid Background="#FFE5E5E5">
                     <Canvas HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="665">
                         <Canvas.Background>
@@ -66,7 +66,7 @@
                     </Canvas>
                 </Grid>
             </TabItem>
-            <TabItem Header="Explain Plan">
+            <TabItem Header="Estadísticas">
                 <Grid Background="#FFE5E5E5">
                     <Canvas HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="665">
                         <Canvas.Background>

@@ -56,7 +56,7 @@
                     </Label.RenderTransform>
                 </Label>
             </Canvas>
-            <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="White" Canvas.Left="586" Canvas.Top="190" Height="30"/>
+            <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="White" Height="30" Canvas.Left="586" Canvas.Top="190"/>
         </Canvas>
 
     </Grid>
