@@ -35,5 +35,10 @@ namespace Proyecto_Bases_de_Datos
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
