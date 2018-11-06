@@ -35,7 +35,6 @@ C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Men
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Performance.g.cs
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Respaldos.g.cs
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Seguridad.g.cs
-C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Tunning.g.cs
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\App.g.cs
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.cache
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.lref
@@ -52,7 +51,6 @@ C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Men
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Performance.baml
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Respaldos.baml
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Seguridad.baml
-C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Tunning.baml
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.g.resources
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto_Bases_de_Datos.Properties.Resources.resources
 C:\Users\Usuario\Source\Repos\BasesdeDatos\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.GenerateResource.cache
