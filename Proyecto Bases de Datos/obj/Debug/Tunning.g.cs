@@ -122,8 +122,6 @@ namespace Proyecto_Bases_de_Datos
             }
             this._contentLoaded = true;
         }
-
-        internal System.Windows.Controls.Button btn_creari;
     }
 }
 

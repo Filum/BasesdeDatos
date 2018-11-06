@@ -16,6 +16,81 @@
     </Window.Background>
     <Grid>
         <Button x:Name="btn_menuT" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
+        <TabControl HorizontalAlignment="Left" Height="300" Margin="29,28,0,0" VerticalAlignment="Top" Width="691">
+            <TabItem Header="Tunning">
+                <Grid Background="#FFE5E5E5">
+                    <Canvas HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="665">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label Content="Usuario: " Canvas.Left="26" Canvas.Top="43"/>
+                        <TextBox Height="23" Canvas.Left="102" TextWrapping="Wrap"  Canvas.Top="46" Width="120" TextChanged="TextBox_TextChanged"/>
+                        <DataGrid Height="114" Canvas.Left="102" Canvas.Top="106" Width="160"/>
+                        <Label Content="Tabla: " Canvas.Left="26" Canvas.Top="106"/>
+                        <Label Content="_____________________________________________________________________________________" Canvas.Left="189" Canvas.Top="108" RenderTransformOrigin="0.5,0.5" Width="215" Foreground="#FFF7E8E8">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="89.497"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                        <Button Content="Crear Tabla Tunning" Canvas.Left="324" Canvas.Top="28" Width="119"/>
+                        <Button Content="Crear Index" Canvas.Left="324" Canvas.Top="77" Width="104" RenderTransformOrigin="0.047,0.474" Height="22"/>
+                        <Button Content="Finalizar Tunning" Canvas.Left="324" Canvas.Top="114" Width="104" Height="26"/>
+                    </Canvas>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Estadísticas">
+                <Grid Background="#FFE5E5E5">
+                    <Canvas HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="665">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label Content="_____________________________________________________________________________________" Canvas.Left="224" Canvas.Top="110" RenderTransformOrigin="0.5,0.5" Width="215" Foreground="#FFF7E8E8">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="89.497"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                    </Canvas>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Explain Plan">
+                <Grid Background="#FFE5E5E5">
+                    <Canvas HorizontalAlignment="Left" Height="252" Margin="10,10,0,0" VerticalAlignment="Top" Width="665">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label Content="_____________________________________________________________________________________" Canvas.Left="224" Canvas.Top="110" RenderTransformOrigin="0.5,0.5" Width="215" Foreground="#FFF7E8E8">
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="89.497"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+                        </Label>
+                    </Canvas>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>

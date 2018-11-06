@@ -30,5 +30,10 @@ namespace Proyecto_Bases_de_Datos
             men.Show();
             this.Close();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
