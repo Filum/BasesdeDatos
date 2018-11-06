@@ -70,7 +70,6 @@ C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Menu.g.cs
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Performance.g.cs
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Respaldos.g.cs
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Seguridad.g.cs
-C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Tunning.g.cs
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\App.g.cs
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.cache
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos_MarkupCompile.lref
@@ -81,7 +80,6 @@ C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Menu.baml
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Performance.baml
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Respaldos.baml
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Seguridad.baml
-C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Tunning.baml
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.g.resources
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto_Bases_de_Datos.Properties.Resources.resources
 C:\Users\shirl\Desktop\BD\Proyecto Bases de Datos\obj\Debug\Proyecto Bases de Datos.csproj.GenerateResource.cache
