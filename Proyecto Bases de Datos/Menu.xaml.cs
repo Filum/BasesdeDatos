@@ -66,11 +66,6 @@ namespace Proyecto_Bases_de_Datos
             this.Close();
         }
 
-        private void btn_tunning_Click(object sender, RoutedEventArgs e)
-        {
-            Tunning tu = new Tunning();
-            tu.Show();
-            this.Close();
-        }
+        
     }
 }
