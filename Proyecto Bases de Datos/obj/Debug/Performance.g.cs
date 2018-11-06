@@ -146,10 +146,6 @@ namespace Proyecto_Bases_de_Datos
             }
             this._contentLoaded = true;
         }
-
-        internal System.Windows.Controls.TextBox txb_1;
-        internal System.Windows.Controls.TextBox txb_2;
-        internal System.Windows.Controls.TextBox txb_2_1;
     }
 }
 
