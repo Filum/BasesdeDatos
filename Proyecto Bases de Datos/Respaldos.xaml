@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_Bases_de_Datos"
         mc:Ignorable="d"
-        Title="Respaldos" Height="450" Width="800">
+        Title="Respaldos" Height="485.2" Width="800">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,10 +15,24 @@
                 <GradientStop Color="#FF3262C7" Offset="0.041"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
-        <TabControl HorizontalAlignment="Left" Height="285" Margin="32,47,0,0" VerticalAlignment="Top" Width="664">
+        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="716,392,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
+        <TabControl HorizontalAlignment="Left" Height="381" Margin="32,47,0,0" VerticalAlignment="Top" Width="664">
             <TabItem Header="Respaldos">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="label1" Content="Nombe del archivo de respaldo:" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_nombreArchivo" HorizontalAlignment="Left" Height="23" Margin="204,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                    <Button x:Name="button" Content="Crear Respaldo FULL" HorizontalAlignment="Left" Margin="416,38,0,0" VerticalAlignment="Top" Width="130" Height="37" Click="button_Click"/>
+                    <Label x:Name="label2" Content="Schema:" HorizontalAlignment="Left" Margin="20,169,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label3" Content="Directorio:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_directorio" HorizontalAlignment="Left" Height="48" Margin="101,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+                    <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" Margin="101,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+                    <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,169,0,0" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged"/>
+                    <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" Margin="101,209,0,0" VerticalAlignment="Top" Width="272"/>
+                    <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" Margin="20,209,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="button1" Content="Crear respaldo por &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="416,106,0,0" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click"/>
+                    <Button x:Name="button2" Content="Crear respaldo por &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="416,170,0,0" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Administración archivos">
                 <Grid Background="#FFE5E5E5"/>
@@ -29,6 +43,7 @@
             <TabItem Header="Administración Schemas">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
+
         </TabControl>
 
     </Grid>
