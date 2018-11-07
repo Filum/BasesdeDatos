@@ -32,11 +32,11 @@
                     </LinearGradientBrush>
                 </Canvas.Background>
                 <Label Content="____________________________________________________________________________________________________________________________________________________________________________________________________________________________________" Canvas.Left="25" Canvas.Top="-256" Foreground="#FFFFFDFD" Height="29" Width="588"/>
-                <Button x:Name="btn_BD" Content="Base de Datos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="30" FontFamily="Arial" Background="Black" Click="btn_BD_Click" Canvas.Left="308" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="btn_performance" Content="Performance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_performance_Click" Canvas.Left="586" Canvas.Top="120" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="btn_auditoria" Content="Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_auditoria_Click" Canvas.Left="25" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="btn_respaldos" Content="Respaldos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FF0F0E0E" Click="btn_respaldos_Click" Canvas.Left="25" Canvas.Top="120" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="btn_seguridad" Content="Seguridad" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Click="btn_seguridad_Click" Background="Black" Canvas.Left="308" Canvas.Top="120" RenderTransformOrigin="0.468,-0.2" BorderBrush="White" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                <Button x:Name="btn_BD" Content="Base de Datos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="30" FontFamily="Arial" Background="Black" Click="btn_BD_Click" Canvas.Left="308" Canvas.Top="190" BorderBrush="White" Foreground="White" FontSize="14"/>
+                <Button x:Name="btn_performance" Content="Performance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_performance_Click" Canvas.Left="586" Canvas.Top="120" BorderBrush="White" Foreground="White" FontSize="14"/>
+                <Button x:Name="btn_auditoria" Content="Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_auditoria_Click" Canvas.Left="25" Canvas.Top="190" BorderBrush="White" Foreground="White" FontSize="14"/>
+                <Button x:Name="btn_respaldos" Content="Respaldos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FF0F0E0E" Click="btn_respaldos_Click" Canvas.Left="25" Canvas.Top="120" BorderBrush="White" Foreground="White" FontSize="14"/>
+                <Button x:Name="btn_seguridad" Content="Seguridad" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Click="btn_seguridad_Click" Background="Black" Canvas.Left="308" Canvas.Top="120" RenderTransformOrigin="0.468,-0.2" BorderBrush="White" Foreground="White" FontSize="14"/>
                 <Canvas HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="701" Background="Black" RenderTransformOrigin="0.511,0.639" Canvas.Left="7" Canvas.Top="11">
                     <Canvas.RenderTransform>
                         <TransformGroup>
@@ -57,7 +57,7 @@
                         </Label.RenderTransform>
                     </Label>
                 </Canvas>
-                <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="Black" Height="30" Canvas.Left="586" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="Black" Height="30" Canvas.Left="586" Canvas.Top="190" BorderBrush="White" Foreground="White" FontSize="14"/>
             </Canvas>
         </Canvas>
 
