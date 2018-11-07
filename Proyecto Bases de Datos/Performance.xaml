@@ -11,11 +11,11 @@
             <GradientStop Color="Black" Offset="1"/>
             <GradientStop Color="#FF5454FF"/>
             <GradientStop Color="Black" Offset="0.991"/>
-            <GradientStop Color="#FF3262C7" Offset="0.041"/>
+            <GradientStop Color="#FF0C3180" Offset="0.041"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <Button x:Name="btn_menuT" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
+        <Button x:Name="btn_menuT" Content="Menu" HorizontalAlignment="Left" Margin="710,347,0,0" VerticalAlignment="Top" Width="59" Background="Black" Height="36" Click="btn_menuS_Click" BorderBrush="White" Foreground="White" FontWeight="Bold"/>
         <TabControl HorizontalAlignment="Left" Height="300" Margin="29,28,0,0" VerticalAlignment="Top" Width="691">
             <TabItem Header="Tunning">
                 <Grid Background="#FFE5E5E5">
@@ -26,11 +26,14 @@
                                 <GradientStop Color="#FF0C8DF9"/>
                             </LinearGradientBrush>
                         </Canvas.Background>
-                        <Label Content="SELECT" Canvas.Left="41" Canvas.Top="59"/>
-                        <TextBox Height="53" Canvas.Left="102" TextWrapping="Wrap"  Canvas.Top="46" Width="412" TextChanged="TextBox_TextChanged"/>
-                        <Button Content="Crear Tabla Tunning" Canvas.Left="26" Canvas.Top="18" Width="119"/>
-                        <Button Content="Crear Index" Canvas.Left="173" Canvas.Top="137" Width="104" RenderTransformOrigin="0.047,0.474" Height="22"/>
-                        <Button Content="Finalizar Tunning" Canvas.Left="357" Canvas.Top="137" Width="104" Height="26"/>
+                        <Label Content="SELECT" Canvas.Left="25" Canvas.Top="28" FontWeight="Bold" Background="{x:Null}" Foreground="Black"/>
+                        <TextBox x:Name="txb_select" Height="48" Canvas.Left="102" TextWrapping="Wrap"  Canvas.Top="10" Width="429" TextChanged="TextBox_TextChanged"/>
+                        <Button Content="Crear Tabla Tunning" Canvas.Left="536" Canvas.Top="222" Width="119" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_crear_index" Content="Crear Index" Canvas.Left="102" Canvas.Top="119" Width="104" RenderTransformOrigin="0.047,0.474" Height="22" Click="Button_Click_crear_index" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_fin_tunning" Content="Finalizar Tunning" Canvas.Left="225" Canvas.Top="119" Width="104" Height="22" RenderTransformOrigin="0.49,1.115" Click="Button_Click_finalizarT" Foreground="White" BorderBrush="White" Background="Black"/>
+                        <Label x:Name="index" Content="INDEX" Canvas.Left="28" Canvas.Top="75" Foreground="Black" FontWeight="Bold"/>
+                        <TextBox x:Name="txb_index" Height="23" Canvas.Left="102" TextWrapping="Wrap"  Canvas.Top="78" Width="116" TextChanged="TextBox_TextChanged"/>
+                        <DataGrid Height="45" Canvas.Left="102" Canvas.Top="185" Width="285"/>
                     </Canvas>
                 </Grid>
             </TabItem>
@@ -53,16 +56,16 @@
                                 </TransformGroup>
                             </Label.RenderTransform>
                         </Label>
-                        <Button x:Name="btn_estadisticas1" Content="Generar Estadísticas" Canvas.Left="76" Canvas.Top="65" Width="134" Click="Button_Click" RenderTransformOrigin="0.497,0.727"/>
-                        <Button x:Name="btn_estadisticas_2" Content="Generar Estadísticas" Canvas.Left="419" Canvas.Top="85" Width="134" Click="Button_Click"/>
-                        <Label Content="Schema" Canvas.Left="20" Canvas.Top="24"/>
-                        <TextBox x:Name="txb_1" Height="23" Canvas.Left="76" TextWrapping="Wrap" Text="" Canvas.Top="22" Width="120"/>
-                        <Label Content="Schema" Canvas.Left="361" Canvas.Top="21"/>
-                        <Label Content="Tabla" Canvas.Left="361" Canvas.Top="57"/>
-                        <TextBox x:Name="txb_2" Height="23" Canvas.Left="433" TextWrapping="Wrap" Text="" Canvas.Top="24" Width="120"/>
-                        <TextBox x:Name="txb_2_1" TextWrapping="Wrap" Text="" Height="23" Canvas.Left="433" Canvas.Top="57" Width="120"/>
+                        <Button x:Name="btn_estadisticas1" Content="Generar Estadísticas" Canvas.Left="76" Canvas.Top="65" Width="134" Click="Button_Click_estadisticas1" RenderTransformOrigin="0.497,0.727" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_estadisticas_2" Content="Generar Estadísticas" Canvas.Left="428" Canvas.Top="79" Width="134" Click="Button_Click_estadisticas2" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label Content="Schema" Canvas.Left="20" Canvas.Top="24" Background="{x:Null}" Foreground="White"/>
+                        <Label Content="Schema" Canvas.Left="361" Canvas.Top="21" Foreground="White"/>
+                        <Label Content="Tabla" Canvas.Left="361" Canvas.Top="52" Foreground="White"/>
                         <DataGrid Height="100" Canvas.Left="20" Canvas.Top="120" Width="248"/>
                         <DataGrid Height="104" Canvas.Left="361" Canvas.Top="120" Width="246"/>
+                        <ComboBox x:Name="cb_schema_performance" Canvas.Left="90" Canvas.Top="28" Width="120" SelectionChanged="cb_schema_performance_SelectionChanged"/>
+                        <ComboBox x:Name="cb_tabla" Canvas.Left="442" Canvas.Top="52" Width="120" SelectionChanged="cb_tabla_SelectionChanged"/>
+                        <ComboBox x:Name="cb_schema2" Canvas.Left="442" Canvas.Top="21" Width="120" SelectionChanged="cb_schema2_SelectionChanged"/>
                     </Canvas>
                 </Grid>
             </TabItem>
@@ -75,7 +78,7 @@
                                 <GradientStop Color="#FF0C8DF9"/>
                             </LinearGradientBrush>
                         </Canvas.Background>
-                        <Label Content="_____________________________________________________________________________________" Canvas.Left="224" Canvas.Top="110" RenderTransformOrigin="0.5,0.5" Width="215" Foreground="#FFF7E8E8">
+                        <Label Content="_____________________________________________________________________________________" Canvas.Left="279" Canvas.Top="106" RenderTransformOrigin="0.5,0.5" Width="215" Foreground="#FFF7E8E8">
                             <Label.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -85,6 +88,17 @@
                                 </TransformGroup>
                             </Label.RenderTransform>
                         </Label>
+                        <Button x:Name="btn_tablaeindice" Content="Tabla e Índice" Canvas.Left="187" Canvas.Top="63" Width="110" Click="Button_Click_tabla_indice" Height="28" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_borrar" Content="Borrar Estadísticas" Canvas.Left="187" Canvas.Top="196" Width="110" Click="Button_Click_borrar_estadisticas" Height="28" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_tabla" Content="Tabla" Canvas.Left="187" Canvas.Top="149" Width="110" Click="Button_Click_tabla" Height="28" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_indices" Content="Índices" Canvas.Left="187" Canvas.Top="99" Width="110" Click="Button_Click_indices" Height="28" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label Content="Actualizar Estadísticas" Canvas.Left="100" Canvas.Top="19" FontWeight="Bold" Foreground="White"/>
+                        <Label Content="Seleccione la Tabla" Canvas.Left="22" Canvas.Top="124" Foreground="White"/>
+                        <ComboBox x:Name="cb_schema4" Canvas.Left="22" Canvas.Top="155" Width="120"/>
+                        <DataGrid Height="148" Canvas.Left="440" Canvas.Top="46" Width="185"/>
+                        <Label Content="Estadísticas" Canvas.Left="497" Canvas.Top="15" RenderTransformOrigin="0.843,0.692" FontWeight="Bold" Foreground="White"/>
+                        <ComboBox x:Name="cb_schema_3" Canvas.Left="22" Canvas.Top="96" Width="120" SelectionChanged="cb_schema_3_SelectionChanged"/>
+                        <Label Content="Seleccione el Schema" Canvas.Left="22" Canvas.Top="65" Foreground="White"/>
                     </Canvas>
                 </Grid>
             </TabItem>
