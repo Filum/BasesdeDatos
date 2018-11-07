@@ -43,33 +43,49 @@
             </TabItem>
             <TabItem Header="Resize de Tablespace">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="tabla_tablespaces" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Margin="314,65,0,55" Width="333"/>
-                    <Label x:Name="label1" Content="Seleccione el tablespace al cual desea hacer el RESIZE:" HorizontalAlignment="Left" Margin="13,65,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label2" Content="Tamaño al que se quiere agrandar :" HorizontalAlignment="Left" Margin="14,191,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_tamaño" HorizontalAlignment="Left" Height="23" Margin="214,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
-                    <Label x:Name="label3" Content="M" HorizontalAlignment="Left" Margin="263,195,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button1" Content="Hacer RESIZE" HorizontalAlignment="Left" Margin="28,229,0,0" VerticalAlignment="Top" Width="96" Height="31" Click="button1_Click"/>
-                    <Button x:Name="button2" Content="Actualizar Datos" HorizontalAlignment="Left" Margin="13,24,0,0" VerticalAlignment="Top" Width="111" Click="button2_Click"/>
-                    <Button x:Name="button3" Content="Seleccionar &#xD;&#xA;Tablespace" HorizontalAlignment="Left" Margin="527,269,0,0" VerticalAlignment="Top" Width="93" Height="37" Click="button3_Click"/>
-                    <Label x:Name="label4" Content="Tablespace Seleccionado:" HorizontalAlignment="Left" Margin="13,103,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_tablespaceseleccionado" HorizontalAlignment="Left" IsReadOnly="True" Height="52" Margin="13,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285"/>
                     <Label x:Name="lbl_respuesta" Content="" HorizontalAlignment="Left" Margin="13,276,0,0" VerticalAlignment="Top" Width="498"/>
+                    <Canvas HorizontalAlignment="Left" Height="297" Margin="13,5,0,0" VerticalAlignment="Top" Width="631">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <DataGrid x:Name="tabla_tablespaces" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Width="256" Height="196" Canvas.Left="365" Canvas.Top="10"/>
+                        <Button x:Name="button3" Content="Seleccionar &#xA;Tablespace" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="37" Click="button3_Click" Canvas.Left="528" Canvas.Top="231" Foreground="White" Background="Black" BorderBrush="White"/>
+                        <Button x:Name="button2" Content="Actualizar Datos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="button2_Click" Canvas.Left="15" Canvas.Top="20" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label x:Name="label1" Content="Seleccione el tablespace al cual desea hacer el RESIZE:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="50" Foreground="White" Canvas.Left="8"/>
+                        <Label x:Name="label4" Content="Tablespace Seleccionado:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="3" Canvas.Top="76" Foreground="White"/>
+                        <TextBox x:Name="txt_tablespaceseleccionado" HorizontalAlignment="Left" IsReadOnly="True" Height="52" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285" Canvas.Left="10" Canvas.Top="107"/>
+                        <Label x:Name="label3" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.262,0.462" Canvas.Left="257" Canvas.Top="180" Foreground="White"/>
+                        <TextBox x:Name="txt_tamaño" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Canvas.Left="203" Canvas.Top="183"/>
+                        <Label x:Name="label2" Content="Tamaño al que se quiere agrandar :" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="8" Canvas.Top="183" Foreground="White"/>
+                        <Button x:Name="button1" Content="Hacer RESIZE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="31" Click="button1_Click" Canvas.Left="30" Canvas.Top="231" BorderBrush="White" Foreground="White" Background="Black"/>
+                    </Canvas>
                 </Grid>
             </TabItem>
             <TabItem Header="Agregar Datafile a tablespace">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="tabla_tablespaces1" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Margin="375,69,0,51" Width="152"/>
-                    <Label x:Name="label1_Copy" Content="Seleccione el tablespace al cual desea agregar otro DATAFILE:" HorizontalAlignment="Left" Margin="41,69,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button2_Copy" Content="Actualizar Datos" HorizontalAlignment="Left" Margin="41,28,0,0" VerticalAlignment="Top" Width="111" Click="button2_Copy_Click" />
-                    <Button x:Name="button3_Copy" Content="Seleccionar &#xA;Tablespace" HorizontalAlignment="Left" Margin="544,80,0,0" VerticalAlignment="Top" Width="93" Height="53" Click="button3_Copy_Click" />
-                    <Label x:Name="label4_Copy" Content="Tablespace Seleccionado:" HorizontalAlignment="Left" Margin="41,107,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_tablespaceseleccionado1" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="190,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147"/>
-                    <Label x:Name="lbl_respuesta3" Content="" HorizontalAlignment="Left" Margin="20,270,0,0" VerticalAlignment="Top" Width="617"/>
-                    <Label Content="Nombre del Datafile que desea agregar al &#xD;&#xA;tablespace seleccionado:" HorizontalAlignment="Left" Margin="41,144,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_nombretablespaceNUEVO" HorizontalAlignment="Left" Height="23" Margin="41,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" />
-                    <Label x:Name="label_Copy1" Content="Tamaño del Datafile a agregar:" HorizontalAlignment="Left" Margin="37,216,0,0" VerticalAlignment="Top" Width="239"/>
-                    <TextBox x:Name="txt_tamañotablespaceNUEVO" HorizontalAlignment="Left" Height="23" Margin="39,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.49,1.009"/>
-                    <Button x:Name="button4" Content="Agregar DATAFILE" HorizontalAlignment="Left" Margin="241,201,0,0" VerticalAlignment="Top" Width="113" Height="41" Click="button4_Click"/>
+                    <Label x:Name="lbl_respuesta3" Content="" HorizontalAlignment="Left" Margin="20,285,0,0" VerticalAlignment="Top" Width="617" Height="11"/>
+                    <Canvas HorizontalAlignment="Left" Height="282" Margin="10,14,0,0" VerticalAlignment="Top" Width="627">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Button x:Name="button2_Copy" Content="Actualizar Datos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Click="button2_Copy_Click" Canvas.Left="26" Canvas.Top="10" Background="Black" BorderBrush="White" Foreground="White" />
+                        <Label x:Name="label1_Copy" Content="Seleccione el tablespace al cual desea agregar otro DATAFILE:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="26" Canvas.Top="30" Foreground="White"/>
+                        <DataGrid x:Name="tabla_tablespaces1" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Width="152" Height="196" Canvas.Left="360" Canvas.Top="19"/>
+                        <Button x:Name="button3_Copy" Content="Seleccionar &#xA;Tablespace" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="53" Click="button3_Copy_Click" RenderTransformOrigin="0.409,2.708" Canvas.Left="524" Canvas.Top="45" Foreground="White" BorderBrush="White" Background="Black" />
+                        <Label x:Name="label4_Copy" Content="Tablespace Seleccionado:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="26" Canvas.Top="75" Foreground="White"/>
+                        <TextBox x:Name="txt_tablespaceseleccionado1" HorizontalAlignment="Left" IsReadOnly="True" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Canvas.Left="174" Canvas.Top="75"/>
+                        <Label Content="Nombre del Datafile que desea agregar al &#xA;tablespace seleccionado:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="114" Canvas.Left="26" Foreground="White"/>
+                        <TextBox x:Name="txt_nombretablespaceNUEVO" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Canvas.Left="30" Canvas.Top="161" />
+                        <Label x:Name="label_Copy1" Content="Tamaño del Datafile a agregar:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="239" Canvas.Left="26" Canvas.Top="189" RenderTransformOrigin="0.563,1.25" Foreground="White"/>
+                        <TextBox x:Name="txt_tamañotablespaceNUEVO" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="166" RenderTransformOrigin="0.49,1.009" Canvas.Left="28" Canvas.Top="220"/>
+                        <Button x:Name="button4" Content="Agregar DATAFILE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Height="41" Click="button4_Click" Canvas.Left="220" Canvas.Top="215" Background="Black" BorderBrush="White" Foreground="White"/>
+                    </Canvas>
                 </Grid>
             </TabItem>
         </TabControl>

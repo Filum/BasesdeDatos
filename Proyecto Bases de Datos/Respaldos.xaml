@@ -15,27 +15,44 @@
                 <GradientStop Color="#FF0C3180" Offset="0.041"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="716,392,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
+        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="716,392,0,0" VerticalAlignment="Top" Width="59" Background="Black" Height="36" Click="btn_menuS_Click" BorderBrush="White" Foreground="White"/>
         <TabControl HorizontalAlignment="Left" Height="381" Margin="32,47,0,0" VerticalAlignment="Top" Width="664">
             <TabItem Header="Respaldos">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="label1" Content="Nombe del archivo de respaldo:" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_nombreArchivo" HorizontalAlignment="Left" Height="23" Margin="204,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="button" Content="Crear Respaldo FULL" HorizontalAlignment="Left" Margin="416,38,0,0" VerticalAlignment="Top" Width="130" Height="37" Click="button_Click"/>
-                    <Label x:Name="label2" Content="Schema:" HorizontalAlignment="Left" Margin="20,169,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label3" Content="Directorio:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_directorio" HorizontalAlignment="Left" Height="48" Margin="101,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" Margin="101,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,169,0,0" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged"/>
-                    <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" Margin="101,209,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="cbox_tabla_SelectionChanged"/>
-                    <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" Margin="20,209,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button1" Content="Crear respaldo por &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="416,106,0,0" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click"/>
-                    <Button x:Name="button2" Content="Crear respaldo por &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="416,170,0,0" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click"/>
+                    <Canvas HorizontalAlignment="Left" Height="333" Margin="10,10,0,0" VerticalAlignment="Top" Width="638">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label x:Name="label1" Content="Nombe del archivo de respaldo:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="27" Canvas.Top="10" Foreground="White"/>
+                        <TextBox x:Name="txt_nombreArchivo" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Canvas.Left="211" Canvas.Top="13"/>
+                        <Button x:Name="button" Content="Crear Respaldo FULL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="37" Click="button_Click" Canvas.Left="440" Canvas.Top="26" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label x:Name="label3" Content="Directorio:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="27" Canvas.Top="71" Foreground="White"/>
+                        <TextBox x:Name="txt_directorio" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="108" Canvas.Top="68"/>
+                        <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="27" Canvas.Top="141" Foreground="White"/>
+                        <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="108" Canvas.Top="141"/>
+                        <Button x:Name="button1" Content="Crear respaldo por &#xA;Schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click" Canvas.Left="440" Canvas.Top="116" Foreground="White" BorderBrush="White" Background="Black"/>
+                        <Label x:Name="label2" Content="Schema:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="27" Canvas.Top="192" Foreground="White"/>
+                        <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged" Canvas.Left="100" Canvas.Top="192"/>
+                        <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="27" Canvas.Top="250" Foreground="White"/>
+                        <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" SelectionChanged="cbox_tabla_SelectionChanged" Canvas.Left="100" Canvas.Top="250"/>
+                        <Button x:Name="button2" Content="Crear respaldo por &#xA;Tabla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click" Canvas.Left="440" Canvas.Top="218" Background="Black" BorderBrush="White" Foreground="White"/>
+                    </Canvas>
                 </Grid>
             </TabItem>
             <TabItem Header="Administración archivos">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Canvas HorizontalAlignment="Left" Height="94" Margin="364,194,0,0" VerticalAlignment="Top" Width="219">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                    </Canvas>
+                </Grid>
             </TabItem>
             <TabItem Header="Recuperación">
                 <Grid Background="#FFE5E5E5"/>
