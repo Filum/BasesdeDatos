@@ -43,7 +43,7 @@
             </TabItem>
             <TabItem Header="Resize de Tablespace">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="tabla_tablespaces" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Margin="314,65,0,55" Width="333"/>
+                    <DataGrid x:Name="tabla_tablespaces" IsReadOnly="True" CanUserAddRows="False" HorizontalAlignment="Left" Margin="314,73,0,47" Width="333" SelectionChanged="tabla_tablespaces_SelectionChanged"/>
                     <Label x:Name="label1" Content="Seleccione el tablespace al cual desea hacer el RESIZE:" HorizontalAlignment="Left" Margin="13,65,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label2" Content="Tamaño al que se quiere agrandar :" HorizontalAlignment="Left" Margin="14,191,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txt_tamaño" HorizontalAlignment="Left" Height="23" Margin="214,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>

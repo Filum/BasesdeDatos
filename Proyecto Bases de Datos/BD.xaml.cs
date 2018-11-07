@@ -198,5 +198,10 @@ namespace Proyecto_Bases_de_Datos
                 lbl_respuesta3.Content = "No se pudo asignar el Datafile al tablespce";
             }
         }
+
+        private void tabla_tablespaces_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

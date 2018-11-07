@@ -410,7 +410,44 @@ namespace Proyecto_Bases_de_Datos
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = " CREATE OR REPLACE DIRECTORY RESPALDO AS '" + txt_directorioRecuperacion.Text + "'";
+                OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("ERROR AL ASIGNAR PERMISOS DE LECTURA Y ESCRITURA");
+            }
 
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            string strexp = "IMPDP SYSTEM/"+txt_contraseña.Text+"@XE FULL=Y DIRECTORY=RESPALDO DUMPFILE=" + txt_nombreArchivoRecuperacion.Text + ".DMP LOGFILE=IMPDP" +txt_nombreArchivoRecuperacion.Text+".LOG"; MessageBox.Show(strexp);
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.EnableRaisingEvents = true;
+            p.StartInfo.CreateNoWindow = true;
+
+            try
+            {
+                p.Start();
+                p.StandardInput.WriteLine(strexp);
+                p.StandardInput.WriteLine("Exit");
+                p.WaitForExit(1000);
+                MessageBox.Show("TABLA RECUPERADA");
+            }
+            catch
+            {
+                MessageBox.Show("ERROR AL CREAR EL RESPALDO");
+
+            }
         }
     }
     

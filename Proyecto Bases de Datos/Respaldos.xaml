@@ -28,7 +28,7 @@
                     <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" Margin="101,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
                     <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,169,0,0" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged"/>
-                    <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" Margin="101,209,0,0" VerticalAlignment="Top" Width="272" SelectionChanged="cbox_tabla_SelectionChanged"/>
+                    <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" Margin="101,209,0,0" VerticalAlignment="Top" Width="272" />
                     <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" Margin="20,209,0,0" VerticalAlignment="Top"/>
                     <Button x:Name="button1" Content="Crear respaldo por &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="416,106,0,0" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click"/>
                     <Button x:Name="button2" Content="Crear respaldo por &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="416,170,0,0" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click"/>
