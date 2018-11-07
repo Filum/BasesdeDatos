@@ -32,16 +32,28 @@
                     <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" Margin="20,209,0,0" VerticalAlignment="Top"/>
                     <Button x:Name="button1" Content="Crear respaldo por &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="416,106,0,0" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click"/>
                     <Button x:Name="button2" Content="Crear respaldo por &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="416,170,0,0" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click"/>
+
                 </Grid>
             </TabItem>
-            <TabItem Header="Administración archivos">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
+
             <TabItem Header="Recuperación">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Administración Schemas">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="label1_Copy" Content="Nombre del archivo de recuperación:" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_nombreArchivoRecuperacion" HorizontalAlignment="Left" Height="23" Margin="226,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+                    <Label x:Name="label2_Copy" Content="Schema:" HorizontalAlignment="Left" Margin="20,211,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label3_Copy" Content="Directorio:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_directorioRecuperacion" HorizontalAlignment="Left" Height="50" Margin="101,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+                    <Label x:Name="label_Copy" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txt_contraseñaRecuperacion" HorizontalAlignment="Left" Height="23" Margin="101,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+                    <ComboBox x:Name="cbox_schemaRecuperacion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,211,0,0" Initialized="cargarDatos1" SelectionChanged="cbox_schemaRecuperacion_SelectionChanged"/>
+                    <ComboBox x:Name="cbox_tablaRecuperacion" HorizontalAlignment="Left" Margin="101,251,0,0" VerticalAlignment="Top" Width="272"/>
+                    <Label x:Name="label4_Copy" Content="Tabla:" HorizontalAlignment="Left" Margin="20,251,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="button3" Content="Recuperar Respaldo Full" HorizontalAlignment="Left" Margin="441,38,0,0" VerticalAlignment="Top" Width="156" Height="44" Click="button3_Click"/>
+                    <Button x:Name="button4" Content="Recuperar Respaldo Schema" HorizontalAlignment="Left" Margin="441,106,0,0" VerticalAlignment="Top" Width="156" Height="48" Click="button4_Click"/>
+                    <Button x:Name="button5" Content="Recuperar Respaldo Tablas" HorizontalAlignment="Left" Margin="441,169,0,0" VerticalAlignment="Top" Width="156" Height="47" Click="button5_Click"/>
+                    <Label x:Name="label5" Content="Usuario:" HorizontalAlignment="Left" Margin="22,128,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cbox_UsuarioRespaldo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="101,130,0,0" Initialized="cargarDatos2"/>
+                </Grid>
             </TabItem>
 
         </TabControl>
