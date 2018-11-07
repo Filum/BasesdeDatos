@@ -47,9 +47,7 @@ namespace Proyecto_Bases_de_Datos
 
         private void btn_salir_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow ventana = new MainWindow();
             this.Close();
-            ventana.Show();
         }
 
         private void btn_auditoria_Click(object sender, RoutedEventArgs e)

@@ -219,6 +219,11 @@ namespace Proyecto_Bases_de_Datos
                 MessageBox.Show("ERROR AL CREAR EL RESPALDO");
             }
         }
+
+        private void cbox_tabla_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
     
 }

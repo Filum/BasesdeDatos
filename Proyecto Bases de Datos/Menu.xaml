@@ -23,40 +23,42 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
         </StackPanel>
-        <Canvas HorizontalAlignment="Left" Height="250" Margin="34,56,0,0" VerticalAlignment="Top" Width="722" OpacityMask="#FF22D3A2">
-            <Canvas.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0D138D" Offset="1"/>
-                    <GradientStop Color="#FF0C8DF9"/>
-                </LinearGradientBrush>
-            </Canvas.Background>
-            <Label Content="____________________________________________________________________________________________________________________________________________________________________________________________________________________________________" Canvas.Left="25" Canvas.Top="-256" Foreground="#FFFFFDFD" Height="29" Width="588"/>
-            <Button x:Name="btn_BD" Content="Base de Datos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="30" FontFamily="Arial" Background="#FFF7F6F6" Click="btn_BD_Click" Canvas.Left="308" Canvas.Top="190"/>
-            <Button x:Name="btn_performance" Content="Performance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FFF7F6F6" Click="btn_performance_Click" Canvas.Left="586" Canvas.Top="120"/>
-            <Button x:Name="btn_auditoria" Content="Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FFF7F6F6" Click="btn_auditoria_Click" Canvas.Left="25" Canvas.Top="190"/>
-            <Button x:Name="btn_respaldos" Content="Respaldos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FFF7F6F6" Click="btn_respaldos_Click" Canvas.Left="25" Canvas.Top="120"/>
-            <Button x:Name="btn_seguridad" Content="Seguridad" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Click="btn_seguridad_Click" Background="#FFF7F6F6" Canvas.Left="308" Canvas.Top="120" RenderTransformOrigin="0.468,-0.2"/>
-            <Canvas HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="723" Background="Black" RenderTransformOrigin="0.511,0.639" Canvas.Left="-3" Canvas.Top="3">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.493"/>
-                        <RotateTransform Angle="0.572"/>
-                        <TranslateTransform Y="-1.51"/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Label Content="       Proyecto de Bases de Datos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Foreground="#FFFFFEFE" FontWeight="Bold" Canvas.Left="185" Canvas.Top="10" Width="424" RenderTransformOrigin="0.5,0.5">
-                    <Label.RenderTransform>
+        <Canvas HorizontalAlignment="Left" Height="282" Margin="30,60,0,0" VerticalAlignment="Top" Width="738" Background="Gainsboro">
+            <Canvas Height="260" VerticalAlignment="Top" OpacityMask="White" HorizontalAlignment="Left" Width="720" Canvas.Left="10" Canvas.Top="10">
+                <Canvas.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF0D138D" Offset="1"/>
+                        <GradientStop Color="#FF0C8DF9"/>
+                    </LinearGradientBrush>
+                </Canvas.Background>
+                <Label Content="____________________________________________________________________________________________________________________________________________________________________________________________________________________________________" Canvas.Left="25" Canvas.Top="-256" Foreground="#FFFFFDFD" Height="29" Width="588"/>
+                <Button x:Name="btn_BD" Content="Base de Datos" HorizontalAlignment="Center" VerticalAlignment="Top" Width="124" Height="30" FontFamily="Arial" Background="Black" Click="btn_BD_Click" Canvas.Left="308" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="btn_performance" Content="Performance" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_performance_Click" Canvas.Left="586" Canvas.Top="120" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="btn_auditoria" Content="Auditoria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="Black" Click="btn_auditoria_Click" Canvas.Left="25" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="btn_respaldos" Content="Respaldos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Background="#FF0F0E0E" Click="btn_respaldos_Click" Canvas.Left="25" Canvas.Top="120" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="btn_seguridad" Content="Seguridad" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Height="30" FontFamily="Arial" Click="btn_seguridad_Click" Background="Black" Canvas.Left="308" Canvas.Top="120" RenderTransformOrigin="0.468,-0.2" BorderBrush="White" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                <Canvas HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="701" Background="Black" RenderTransformOrigin="0.511,0.639" Canvas.Left="7" Canvas.Top="11">
+                    <Canvas.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.047"/>
-                            <TranslateTransform/>
+                            <SkewTransform AngleY="-0.493"/>
+                            <RotateTransform Angle="0.572"/>
+                            <TranslateTransform Y="-1.51"/>
                         </TransformGroup>
-                    </Label.RenderTransform>
-                </Label>
+                    </Canvas.RenderTransform>
+                    <Label Content="       Proyecto de Bases de Datos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Global Sans Serif" FontSize="24" Foreground="#FFFFFEFE" Canvas.Left="167" Canvas.Top="13" Width="424" RenderTransformOrigin="0.5,0.5">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-0.047"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                    </Label>
+                </Canvas>
+                <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="Black" Height="30" Canvas.Left="586" Canvas.Top="190" BorderBrush="White" Foreground="White" FontWeight="Bold" FontSize="14"/>
             </Canvas>
-            <Button x:Name="btn_salir" Content="Salir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Click="btn_salir_Click" Background="White" Height="30" Canvas.Left="586" Canvas.Top="190"/>
         </Canvas>
 
     </Grid>
