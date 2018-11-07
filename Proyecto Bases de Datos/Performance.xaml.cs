@@ -60,44 +60,18 @@ namespace Proyecto_Bases_de_Datos
             }
         }
 
-        private void cb_schema_performance_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                OracleConnection conn = DataBase.Conexion();
-                conn.Open();
-                OracleCommand comando = new OracleCommand();
-                comando.Connection = conn;
-                comando.CommandText = "SELECT TABLE_NAME FROM DBA_TABLES WHERE OWNER = '" + cb_schema_performance.SelectedItem.ToString() + "'";
-                OracleDataAdapter adaptador = new OracleDataAdapter();
-                adaptador.SelectCommand = comando;
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-
-                foreach (DataRow fila in tabla.Rows)
-                {
-                    cb_schema_performance.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
-                }
-                conn.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Error al actualizar datos de la tabla");
-            }
-        }
-
         
 
         private void cb_schema2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
-                cb_tabla.Items.Clear();
+                cb_tabla_2.Items.Clear();
                 OracleConnection conn = DataBase.Conexion();
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "SELECT TABLE_NAME FROM DBA_TABLES WHERE OWNER = '" + cb_schema2.SelectedItem.ToString() + "'";
+                comando.CommandText = "SELECT TABLE_NAME FROM DBA_TABLES WHERE OWNER = '" + cb_schema_2.SelectedItem.ToString() + "'";
                 OracleDataAdapter adaptador = new OracleDataAdapter();
                 adaptador.SelectCommand = comando;
                 DataTable tabla = new DataTable();
@@ -105,7 +79,7 @@ namespace Proyecto_Bases_de_Datos
 
                 foreach (DataRow fila in tabla.Rows)
                 {
-                    cb_tabla.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+                    cb_tabla_2.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
                 }
                 conn.Close();
             }
@@ -114,11 +88,11 @@ namespace Proyecto_Bases_de_Datos
                 MessageBox.Show("Error al actualizar datos de la tabla");
             }
         }
-        private void cargarDatos(object sender, EventArgs e)
+        private void cargarDatos_actualizar(object sender, EventArgs e)
         {
             try
             {
-                cb_schema2.Items.Clear();
+                cb_schema_2.Items.Clear();
                 OracleConnection conn = DataBase.Conexion();
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
@@ -130,7 +104,33 @@ namespace Proyecto_Bases_de_Datos
                 adaptador.Fill(tabla);
                 foreach (DataRow fila in tabla.Rows)
                 {
-                    cb_schema2.Items.Add(Convert.ToString(fila["OWNER"]));
+                    cb_schema_2.Items.Add(Convert.ToString(fila["OWNER"]));
+                }
+
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar datos de la tabla");
+            }
+        }
+        private void cargarDatos_2(object sender, EventArgs e)
+        {
+            try
+            {
+                cb_schema_3.Items.Clear();
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "select distinct owner from dba_objects";
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    cb_schema_3.Items.Add(Convert.ToString(fila["OWNER"]));
                 }
 
                 conn.Close();
@@ -141,10 +141,6 @@ namespace Proyecto_Bases_de_Datos
             }
         }
 
-        private void cb_tabla_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void Button_Click_crear_index(object sender, RoutedEventArgs e)
         {
@@ -200,7 +196,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "ANALYZE TABLE "+cb_schema4.SelectedItem.ToString()+" COMPUTE STATISTICS;";
+                comando.CommandText = "ANALYZE TABLE "+cb_schema_3.SelectedItem.ToString()+" COMPUTE STATISTICS;";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -218,7 +214,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "ANALYZE TABLE " + cb_schema4.SelectedItem.ToString() + " COMPUTE STATISTICS FOR ALL INDEXES;";
+                comando.CommandText = "ANALYZE TABLE " + cb_schema_3.SelectedItem.ToString() + " COMPUTE STATISTICS FOR ALL INDEXES;";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -236,7 +232,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "ANALYZE TABLE " + cb_schema4.SelectedItem.ToString() + " COMPUTE STATISTICS FOR TABLE;";
+                comando.CommandText = "ANALYZE TABLE " + cb_schema_3.SelectedItem.ToString() + " COMPUTE STATISTICS FOR TABLE;";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -254,7 +250,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "ANALYZE TABLE " + cb_schema4.SelectedItem.ToString() + " COMPUTE STATISTICS FOR TABLE;";
+                comando.CommandText = "ANALYZE TABLE "+ cb_tabla_3+" DELETE STATISTICS;";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -272,7 +268,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = " EXEC dbms_stats.gather_schema_stats ('"+cb_schema_performance.SelectedItem.ToString()+"', cascade => true);";
+                comando.CommandText = " EXEC dbms_stats.gather_schema_stats ('"+txb_schema_1.Text+"', cascade => true);";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -286,7 +282,7 @@ namespace Proyecto_Bases_de_Datos
         {
             try
             {
-                cb_schema4.Items.Clear();
+                cb_tabla_3.Items.Clear();
                 OracleConnection conn = DataBase.Conexion();
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
@@ -299,7 +295,7 @@ namespace Proyecto_Bases_de_Datos
 
                 foreach (DataRow fila in tabla.Rows)
                 {
-                    cb_schema4.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
+                    cb_tabla_3.Items.Add(Convert.ToString(fila["TABLE_NAME"]));
                 }
                 conn.Close();
             }
@@ -310,6 +306,16 @@ namespace Proyecto_Bases_de_Datos
         }
 
         private void Button_Click_estadisticas2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cb_schema_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cb_tabla_2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
