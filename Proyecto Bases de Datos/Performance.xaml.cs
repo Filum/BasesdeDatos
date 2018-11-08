@@ -42,7 +42,7 @@ namespace Proyecto_Bases_de_Datos
 
         
 
-        private void cb_schema2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cb_schema_2_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
@@ -248,7 +248,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HR', CASCADE=>TRUE);";
+                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('"+txb_schema_1.Text+"', CASCADE=>TRUE);";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
@@ -293,7 +293,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HR', CASCADE => TRUE);";
+                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('"+cb_schema_2.SelectedItem.ToString()+"', CASCADE => TRUE);";
                 OracleDataReader dr = comando.ExecuteReader();
                 
                 conn.Close();
@@ -340,5 +340,13 @@ namespace Proyecto_Bases_de_Datos
                 MessageBox.Show("Error al actualizar datos de la tabla");
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        
     }
 }
