@@ -268,17 +268,13 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "select username from all_users";
-                OracleDataAdapter adaptador = new OracleDataAdapter();
-                adaptador.SelectCommand = comando;
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-                tabla_estadisticas_1.ItemsSource = tabla.DefaultView;
+                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('" + txb_schema_1.Text +"', CASCADE=>TRUE);";
+                OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }
             catch
             {
-                MessageBox.Show("Error al actualizar datos de la tabla");
+                MessageBox.Show("ERROR");
             }
         }
 
@@ -317,17 +313,14 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "select username from all_users";
-                OracleDataAdapter adaptador = new OracleDataAdapter();
-                adaptador.SelectCommand = comando;
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-                tabla_estadisticas_2.ItemsSource = tabla.DefaultView;
+                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HR', CASCADE => TRUE);";
+                OracleDataReader dr = comando.ExecuteReader();
+                
                 conn.Close();
             }
             catch
             {
-                MessageBox.Show("Error al actualizar datos de la tabla");
+                MessageBox.Show("Error");
             }
         }
 
@@ -344,6 +337,28 @@ namespace Proyecto_Bases_de_Datos
         private void txb_schema_1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_VER_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "select OWNER,INDEX_NAME,NUM_ROWS, SAMPLE_SIZE,LAST_ANALYZED, BLEVEL,LEAF_BLOCKS,DISTINCT_KEYS from dba_indexes where owner = 'HR' and index_name = 'JOB_ID_PK'; ";
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_estadisticas_1.ItemsSource = tabla.DefaultView;
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar datos de la tabla");
+            }
         }
     }
 }
