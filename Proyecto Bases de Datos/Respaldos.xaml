@@ -15,44 +15,60 @@
                 <GradientStop Color="#FF0C3180" Offset="0.041"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="716,392,0,0" VerticalAlignment="Top" Width="59" Background="White" Height="36" Click="btn_menuS_Click"/>
+        <Button x:Name="btn_menuP" Content="Menu" HorizontalAlignment="Left" Margin="716,392,0,0" VerticalAlignment="Top" Width="59" Background="Black" Height="36" Click="btn_menuS_Click" Foreground="White" BorderBrush="White"/>
         <TabControl HorizontalAlignment="Left" Height="381" Margin="32,47,0,0" VerticalAlignment="Top" Width="664">
             <TabItem Header="Respaldos">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="label1" Content="Nombe del archivo de respaldo:" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_nombreArchivo" HorizontalAlignment="Left" Height="23" Margin="204,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-                    <Button x:Name="button" Content="Crear Respaldo FULL" HorizontalAlignment="Left" Margin="416,38,0,0" VerticalAlignment="Top" Width="130" Height="37" Click="button_Click"/>
-                    <Label x:Name="label2" Content="Schema:" HorizontalAlignment="Left" Margin="20,169,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label3" Content="Directorio:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_directorio" HorizontalAlignment="Left" Height="48" Margin="101,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,128,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" Margin="101,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,169,0,0" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged"/>
-                    <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" Margin="101,209,0,0" VerticalAlignment="Top" Width="272" />
-                    <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" Margin="20,209,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button1" Content="Crear respaldo por &#xD;&#xA;Schema" HorizontalAlignment="Left" Margin="416,106,0,0" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click"/>
-                    <Button x:Name="button2" Content="Crear respaldo por &#xD;&#xA;Tabla" HorizontalAlignment="Left" Margin="416,170,0,0" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click"/>
+                    <Canvas HorizontalAlignment="Left" Height="333" Margin="10,10,0,0" VerticalAlignment="Top" Width="638">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label x:Name="label1" Content="Nombe del archivo de respaldo:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="10" Foreground="White"/>
+                        <TextBox x:Name="txt_nombreArchivo" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Canvas.Left="189" Canvas.Top="10"/>
+                        <Button x:Name="button" Content="Crear Respaldo FULL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="37" Click="button_Click" Canvas.Left="450" Canvas.Top="52" Foreground="White" Background="Black" BorderBrush="White"/>
+                        <Label x:Name="label3" Content="Directorio:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="40" Canvas.Top="67" Foreground="White"/>
+                        <TextBox x:Name="txt_directorio" HorizontalAlignment="Left" Height="48" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="128" Canvas.Top="67"/>
+                        <Button x:Name="button1" Content="Crear respaldo por &#xA;Schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="48" Click="button1_Click" Canvas.Left="450" Canvas.Top="129" BorderBrush="White" Background="Black" Foreground="White"/>
+                        <Label x:Name="label" Content="Contraseña:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="40" Canvas.Top="134" Foreground="White"/>
+                        <TextBox x:Name="txt_contraseña" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="128" Canvas.Top="137"/>
+                        <Label x:Name="label2" Content="Schema:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="40" Canvas.Top="192" Foreground="White"/>
+                        <Label x:Name="label4" Content="Tabla:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="40" Canvas.Top="258" Foreground="White"/>
+                        <ComboBox x:Name="cbox_schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Initialized="cargarDatos" SelectionChanged="comboBox_SelectionChanged" Canvas.Left="128" Canvas.Top="196"/>
+                        <ComboBox x:Name="cbox_tabla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Canvas.Left="128" Canvas.Top="262" />
+                        <Button x:Name="button2" Content="Crear respaldo por &#xA;Tabla" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="54" Click="button2_Click" Canvas.Left="450" Canvas.Top="210" Background="Black" BorderBrush="White" Foreground="White"/>
+                    </Canvas>
 
                 </Grid>
             </TabItem>
 
             <TabItem Header="Recuperación">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="label1_Copy" Content="Nombre del archivo de recuperación:" HorizontalAlignment="Left" Margin="20,35,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_nombreArchivoRecuperacion" HorizontalAlignment="Left" Height="23" Margin="226,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
-                    <Label x:Name="label2_Copy" Content="Schema:" HorizontalAlignment="Left" Margin="20,211,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label3_Copy" Content="Directorio:" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_directorioRecuperacion" HorizontalAlignment="Left" Height="50" Margin="101,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <Label x:Name="label_Copy" Content="Contraseña:" HorizontalAlignment="Left" Margin="20,170,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="txt_contraseñaRecuperacion" HorizontalAlignment="Left" Height="23" Margin="101,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
-                    <ComboBox x:Name="cbox_schemaRecuperacion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Margin="101,211,0,0" Initialized="cargarDatos1" SelectionChanged="cbox_schemaRecuperacion_SelectionChanged"/>
-                    <ComboBox x:Name="cbox_tablaRecuperacion" HorizontalAlignment="Left" Margin="101,251,0,0" VerticalAlignment="Top" Width="272"/>
-                    <Label x:Name="label4_Copy" Content="Tabla:" HorizontalAlignment="Left" Margin="20,251,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button3" Content="Recuperar Respaldo Full" HorizontalAlignment="Left" Margin="441,38,0,0" VerticalAlignment="Top" Width="156" Height="44" Click="button3_Click"/>
-                    <Button x:Name="button4" Content="Recuperar Respaldo Schema" HorizontalAlignment="Left" Margin="441,106,0,0" VerticalAlignment="Top" Width="156" Height="48" Click="button4_Click"/>
-                    <Button x:Name="button5" Content="Recuperar Respaldo Tablas" HorizontalAlignment="Left" Margin="441,169,0,0" VerticalAlignment="Top" Width="156" Height="47" Click="button5_Click"/>
-                    <Label x:Name="label5" Content="Usuario:" HorizontalAlignment="Left" Margin="22,128,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="cbox_UsuarioRespaldo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="101,130,0,0" Initialized="cargarDatos2"/>
+                    <Canvas HorizontalAlignment="Left" Height="333" Margin="10,10,0,0" VerticalAlignment="Top" Width="638">
+                        <Canvas.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF0D138D" Offset="1"/>
+                                <GradientStop Color="#FF0C8DF9"/>
+                            </LinearGradientBrush>
+                        </Canvas.Background>
+                        <Label x:Name="label1_Copy" Content="Nombre del archivo de recuperación:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="10" Canvas.Top="10" Foreground="White"/>
+                        <TextBox x:Name="txt_nombreArchivoRecuperacion" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Canvas.Left="225" Canvas.Top="13"/>
+                        <Button x:Name="button3" Content="Recuperar Respaldo Full" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="44" Click="button3_Click" Canvas.Left="446" Canvas.Top="58" BorderBrush="White" Background="Black" Foreground="White" FontSize="14"/>
+                        <Label x:Name="label3_Copy" Content="Directorio:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="23" Canvas.Top="59" Foreground="White"/>
+                        <TextBox x:Name="txt_directorioRecuperacion" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="100" Canvas.Top="59"/>
+                        <Label x:Name="label5" Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.462,0.5" Canvas.Left="23" Canvas.Top="122" Foreground="White"/>
+                        <ComboBox x:Name="cbox_UsuarioRespaldo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Initialized="cargarDatos2" Canvas.Left="100" Canvas.Top="126"/>
+                        <Button x:Name="button4" Content="Recuperar Respaldo Schema" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="48" Click="button4_Click" Canvas.Left="446" Canvas.Top="138" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label x:Name="label_Copy" Content="Contraseña:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="23" Canvas.Top="182" Foreground="White"/>
+                        <TextBox x:Name="txt_contraseñaRecuperacion" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Canvas.Left="100" Canvas.Top="185"/>
+                        <Button x:Name="button5" Content="Recuperar Respaldo Tablas" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="47" Click="button5_Click" Canvas.Left="446" Canvas.Top="211" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label x:Name="label2_Copy" Content="Schema:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="29" Canvas.Top="232" Foreground="White"/>
+                        <ComboBox x:Name="cbox_schemaRecuperacion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Initialized="cargarDatos1" SelectionChanged="cbox_schemaRecuperacion_SelectionChanged" Canvas.Left="96" Canvas.Top="236"/>
+                        <Label x:Name="label4_Copy" Content="Tabla:" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="29" Canvas.Top="275" Foreground="White"/>
+                        <ComboBox x:Name="cbox_tablaRecuperacion" HorizontalAlignment="Left" VerticalAlignment="Top" Width="272" Canvas.Left="96" Canvas.Top="279"/>
+                    </Canvas>
                 </Grid>
             </TabItem>
 
