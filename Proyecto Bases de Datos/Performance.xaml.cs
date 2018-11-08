@@ -1,5 +1,4 @@
-﻿using Oracle.DataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -13,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Oracle.DataAccess.Client;
 
 namespace Proyecto_Bases_de_Datos
 {
@@ -38,27 +38,7 @@ namespace Proyecto_Bases_de_Datos
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                OracleConnection conn = DataBase.Conexion();
-                conn.Open();
-                OracleCommand comando = new OracleCommand();
-                comando.Connection = conn;
-                comando.CommandText = "select username from all_users";
-                OracleDataAdapter adaptador = new OracleDataAdapter();
-                adaptador.SelectCommand = comando;
-                DataTable tabla = new DataTable();
-                adaptador.Fill(tabla);
-                
-                conn.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Error al actualizar datos de la tabla");
-            }
-        }
+  
 
         
 
@@ -85,7 +65,7 @@ namespace Proyecto_Bases_de_Datos
             }
             catch
             {
-                MessageBox.Show("Error al actualizar datos de la tabla");
+                MessageBox.Show("Error");
             }
         }
         private void cargarDatos_actualizar(object sender, EventArgs e)
@@ -137,7 +117,7 @@ namespace Proyecto_Bases_de_Datos
             }
             catch
             {
-                MessageBox.Show("Error al actualizar datos de la tabla");
+                MessageBox.Show("Error");
             }
         }
 
@@ -268,7 +248,7 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('" + txb_schema_1.Text +"', CASCADE=>TRUE);";
+                comando.CommandText = "EXEC DBMS_STATS.GATHER_SCHEMA_STATS('HR', CASCADE=>TRUE);";
                 OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
                 conn.Close();
             }

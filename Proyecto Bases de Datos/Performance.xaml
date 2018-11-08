@@ -67,9 +67,9 @@
                         <ComboBox x:Name="cb_schema_2" Canvas.Left="442" Canvas.Top="21" Width="120" Initialized="cargarDatos_actualizar" SelectionChanged="cb_schema2_SelectionChanged"/>
                         <TextBox x:Name="txb_schema_1" Height="23" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="29" Width="120" TextChanged="txb_schema_1_TextChanged"/>
                         <Button Content="Ver" Canvas.Left="273" Canvas.Top="200" Width="36" Background="Black" BorderBrush="White" Foreground="White" Click="Button_Click_VER_1"/>
-                        <Button Content="Ver" Canvas.Left="612" Canvas.Top="200" Width="36" Background="Black"/>
-                        <Label Content="Label" Canvas.Left="33" Canvas.Top="55" Background="{x:Null}"/>
-                        <TextBox x:Name="txb_label" Height="23" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="58" Width="120" TextChanged="txb_schema_1_TextChanged"/>
+                        <Button Content="Ver" Canvas.Left="612" Canvas.Top="200" Width="36" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label Content="Index" Canvas.Left="33" Canvas.Top="55" Background="{x:Null}" Foreground="White"/>
+                        <TextBox x:Name="txb_label_1" Height="23" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="58" Width="120" TextChanged="txb_schema_1_TextChanged"/>
                     </Canvas>
                 </Grid>
             </TabItem>
