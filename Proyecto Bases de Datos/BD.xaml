@@ -21,7 +21,7 @@
                 <Grid Background="#FFE5E5E5">
                     <Label x:Name="lbl_respuesta1" Content="" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="lbl_respuesta2" Content="" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top"/>
-                    <Canvas HorizontalAlignment="Left" Height="263" Margin="10,29,0,0" VerticalAlignment="Top" Width="616">
+                    <Canvas HorizontalAlignment="Left" Height="275" Margin="10,29,0,0" VerticalAlignment="Top" Width="616">
                         <Canvas.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="#FF0D138D" Offset="1"/>
@@ -43,7 +43,6 @@
             </TabItem>
             <TabItem Header="Resize de Tablespace">
                 <Grid Background="#FFE5E5E5">
-                    <Label x:Name="lbl_respuesta" Content="" HorizontalAlignment="Left" Margin="14,280,0,0" VerticalAlignment="Top" Width="498"/>
                     <Canvas HorizontalAlignment="Left" Height="296" Margin="10,10,0,0" VerticalAlignment="Top" Width="634">
                         <Canvas.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -61,6 +60,7 @@
                         <Label x:Name="label3" Content="M" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="277" Canvas.Top="179" Foreground="White"/>
                         <Button x:Name="button1" Content="Hacer RESIZE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="31" Click="button1_Click" Canvas.Left="25" Canvas.Top="232" Background="Black" BorderBrush="White" Foreground="White"/>
                         <Button x:Name="button3" Content="Seleccionar &#xA;Tablespace" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="37" Click="button3_Click" Canvas.Left="502" Canvas.Top="226" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Label x:Name="lbl_respuesta" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="498" Canvas.Left="56" Canvas.Top="268"/>
                     </Canvas>
                 </Grid>
             </TabItem>
