@@ -37,11 +37,12 @@ namespace Proyecto_Bases_de_Datos
         {
             try
             {
-                OracleConnection conn = DataBase.Conexion();
+                string v_Conn = "DATA SOURCE=localhost:1521/XE;PERSIST SECURITY INFO=True;USER ID=" + txt_usuario.Text + ";PASSWORD = " + txt_contraseña.Text + "";
+                OracleConnection conn = new OracleConnection(v_Conn);
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = "Select name, value from v$parameter where name like 'audit_trail' ";
+                comando.CommandText = "Select * from user_obj_audit_opts";
                 OracleDataAdapter adaptador = new OracleDataAdapter();
                 adaptador.SelectCommand = comando;
                 DataTable tabla = new DataTable();
@@ -71,6 +72,130 @@ namespace Proyecto_Bases_de_Datos
             catch
             {
                 MessageBox.Show("Error enviar el comando");
+            }
+        }
+
+        private void button_Copy3_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                OracleDataReader dr;
+
+                if (cbox_delete.IsChecked == true)
+                {
+                    comando.CommandText = "Audit delete on "+txt_tablayschema.Text+" by access"; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_select.IsChecked == true)
+                {
+                    comando.CommandText = "Audit select on " + txt_tablayschema.Text + " by access"; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_update.IsChecked == true)
+                {
+                    comando.CommandText = "Audit update on " + txt_tablayschema.Text + " by access"; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+                if (cbox_insert.IsChecked == true)
+                {
+                    comando.CommandText = "Audit insert on " + txt_tablayschema.Text + " by access"; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+                if (cbox_full.IsChecked == true)
+                {
+                    comando.CommandText = "Audit all on " + txt_tablayschema.Text + " by access"; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al enviar comandos");
+            }
+        }
+
+        private void button_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "Select name, value from v$parameter where name like 'audit_trail'";
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_datos.ItemsSource = tabla.DefaultView;
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al mostrar datos de la tabla");
+            }
+        }
+
+        private void button_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                OracleDataReader dr;
+
+                if (cbox_delete.IsChecked == true)
+                {
+                    comando.CommandText = "NOAudit delete on " + txt_tablayschema.Text ; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_select.IsChecked == true)
+                {
+                    comando.CommandText = "NOAudit select on " + txt_tablayschema.Text ; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                if (cbox_update.IsChecked == true)
+                {
+                    comando.CommandText = "NOAudit update on " + txt_tablayschema.Text ; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+                if (cbox_insert.IsChecked == true)
+                {
+                    comando.CommandText = "NOAudit insert on " + txt_tablayschema.Text ; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+                if (cbox_full.IsChecked == true)
+                {
+                    comando.CommandText = "NOAudit all on " + txt_tablayschema.Text; MessageBox.Show(comando.CommandText);
+                    dr = comando.ExecuteReader();
+                }
+
+
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al enviar comandos");
             }
         }
     }
