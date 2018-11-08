@@ -56,16 +56,18 @@
                                 </TransformGroup>
                             </Label.RenderTransform>
                         </Label>
-                        <Button x:Name="btn_estadisticas1" Content="Generar Estadísticas" Canvas.Left="76" Canvas.Top="65" Width="134" Click="Button_Click_estadisticas1" RenderTransformOrigin="0.497,0.727" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button x:Name="btn_estadisticas1" Content="Generar Estadísticas" Canvas.Left="76" Canvas.Top="79" Width="134" Click="Button_Click_estadisticas1" RenderTransformOrigin="0.497,0.727" Background="Black" BorderBrush="White" Foreground="White"/>
                         <Button x:Name="btn_estadisticas_2" Content="Generar Estadísticas" Canvas.Left="428" Canvas.Top="79" Width="134" Click="Button_Click_estadisticas2" Background="Black" BorderBrush="White" Foreground="White"/>
                         <Label Content="Schema" Canvas.Left="20" Canvas.Top="24" Background="{x:Null}" Foreground="White"/>
                         <Label Content="Schema" Canvas.Left="361" Canvas.Top="21" Foreground="White"/>
                         <Label Content="Tabla" Canvas.Left="361" Canvas.Top="52" Foreground="White"/>
-                        <DataGrid Height="100" Canvas.Left="20" Canvas.Top="120" Width="248"/>
-                        <DataGrid Height="104" Canvas.Left="361" Canvas.Top="120" Width="246"/>
+                        <DataGrid x:Name="tabla_estadisticas_1" Height="100" Canvas.Left="20" Canvas.Top="120" Width="248"/>
+                        <DataGrid x:Name="tabla_estadisticas_2" Height="104" Canvas.Left="361" Canvas.Top="120" Width="246"/>
                         <ComboBox x:Name="cb_tabla_2" Canvas.Left="442" Canvas.Top="52" Width="120" />
                         <ComboBox x:Name="cb_schema_2" Canvas.Left="442" Canvas.Top="21" Width="120" Initialized="cargarDatos_actualizar" SelectionChanged="cb_schema2_SelectionChanged"/>
                         <TextBox x:Name="txb_schema_1" Height="23" Canvas.Left="90" TextWrapping="Wrap" Text="" Canvas.Top="29" Width="120" TextChanged="txb_schema_1_TextChanged"/>
+                        <Button Content="Ver" Canvas.Left="273" Canvas.Top="200" Width="36" Background="Black" BorderBrush="White" Foreground="White"/>
+                        <Button Content="Ver" Canvas.Left="612" Canvas.Top="200" Width="36" Background="Black"/>
                     </Canvas>
                 </Grid>
             </TabItem>

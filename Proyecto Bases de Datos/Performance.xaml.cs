@@ -268,13 +268,17 @@ namespace Proyecto_Bases_de_Datos
                 conn.Open();
                 OracleCommand comando = new OracleCommand();
                 comando.Connection = conn;
-                comando.CommandText = " EXEC dbms_stats.gather_schema_stats ('"+txb_schema_1.Text+"', cascade => true);";
-                OracleDataReader dr = comando.ExecuteReader(); MessageBox.Show(comando.CommandText);
+                comando.CommandText = "select username from all_users";
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_estadisticas_1.ItemsSource = tabla.DefaultView;
                 conn.Close();
             }
             catch
             {
-                MessageBox.Show("ERROR AL ASIGNAR PERMISOS DE LECTURA Y ESCRITURA");
+                MessageBox.Show("Error al actualizar datos de la tabla");
             }
         }
 
@@ -307,7 +311,24 @@ namespace Proyecto_Bases_de_Datos
 
         private void Button_Click_estadisticas2(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                OracleConnection conn = DataBase.Conexion();
+                conn.Open();
+                OracleCommand comando = new OracleCommand();
+                comando.Connection = conn;
+                comando.CommandText = "select username from all_users";
+                OracleDataAdapter adaptador = new OracleDataAdapter();
+                adaptador.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+                tabla_estadisticas_2.ItemsSource = tabla.DefaultView;
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Error al actualizar datos de la tabla");
+            }
         }
 
         private void cb_schema_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
