@@ -319,5 +319,10 @@ namespace Proyecto_Bases_de_Datos
         {
 
         }
+
+        private void txb_schema_1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
